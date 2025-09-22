@@ -1,4 +1,4 @@
-## Indizea
+## Aurkibidea
 
 - [UrbanNest Web Orrialdea](#urbannest-web-orrialdea)
 - [Lehiakideen azterketa](#lehiakideen-azterketa)
