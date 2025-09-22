@@ -45,7 +45,7 @@
 
 > Azkenik, web orriaren prototipoa erakutsiko dizuet. Atal honetan pentsatzen da web-orriaren azken emaitza izango dela.
 
-![Prototipoaren aurretiko bista](https://www.figma.com/design/DfIKalzCNKm1PNtoME8oSp/Prototipo-de-web?node-id=0-1&p=f&t=AJosjnBdSmsCRIex-0)
+![Prototipoaren aurretiko bista](https://www.figma.com/design/DfIKalzCNKm1PNtoME8oSp/Prototipo-de-web?node-id=0-1&t=AJosjnBdSmsCRIex-1)
 
 
 
