@@ -1,4 +1,4 @@
-## Aurkibidea
+# Aurkibidea
 
 - [UrbanNest Web Orrialdea](#urbannest-web-orrialdea)
 - [Lehiakideen azterketa](#lehiakideen-azterketa)
@@ -7,7 +7,7 @@
 - [Estilo gida](#estilo-gida)
 - [Prototipoa](#prototipoa)
 
-# UrbanNest Web Orrialdea Aurkezpena
+## UrbanNest Web Orrialdea Aurkezpena
 
 > Web orri hau alokatu eta erosteko eraikin sorta zabala eskaintzean datza. Webgune hau aldi baterako erabili nahi dutenentzat edo zerotik hasi nahi dutenentzat da.
 
