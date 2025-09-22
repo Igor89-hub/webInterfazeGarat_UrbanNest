@@ -41,7 +41,11 @@
 - Ikono Estiloa
     - Estilo "linealeko" edo "outline" ikonoak: Ikono horiek diseinu sinplea eta garbia dute, lerro finak soilik erabiliz. Modernoak dira eta ez lukete diseinua gainkargatuko.
 
-### PROTOTIPOA
+## PROTOTIPOA
+
+> Azkenik, web orriaren prototipoa erakutsiko dizuet. Atal honetan pentsatzen da web-orriaren azken emaitza izango dela.
+
+![Prototipoaren aurretiko bista](https://www.figma.com/design/DfIKalzCNKm1PNtoME8oSp/Prototipo-de-web?node-id=0-1&p=f&t=AJosjnBdSmsCRIex-0)
 
 
 
