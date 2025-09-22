@@ -14,6 +14,12 @@
 - Iragarkiak argitaratzea (Fotocasa)
 - Aholkuak orrialdeetan (Idealista)
 
+## Bozetoa
+
+> Kolore-paleta aukeratzen hasi aurretik, eta web orri bati bizia eta forma emango dioten elementu guztiekin, ideia bat izan behar dugu buruan, edo, gutxienez, horren zati bat. Horretarako, ExcaliDraw erabili dut web-orriak izan dezakeen itxuraren zirriborroa marrazteko.
+
+![Bozetoa](/irudiak/excaliDraw_bozetoa.png)
+
 ## Nabigazio Mapa 
 
 > Hemen utziko dut nire web orriak izango duen nabigazio-mapa.
