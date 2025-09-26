@@ -1,4 +1,12 @@
-.hl-mainLayout{
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Domine:wght@400..700&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+}
+
+.hl-mainLayout {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -6,4 +14,91 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
+}
+
+.hl-mainHeaderTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+
+.hl-mainHeader-logo {
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
+    padding: 9px 18px;
+    margin: 0 60px 0 60px;
+}
+
+.hl-mainHeader-welcomeText {
+    width: auto;
+    padding: 9px 18px;
+    margin: 0 60px 0 60px;
+    font-weight: 600;
+    font-size: 48px;
+}
+
+.hl-mainLayout-carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: grey;
+}
+
+.hl-mainLayout-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 20rem;
+    height: 3.5rem;
+    border: 1px solid white;
+    border-radius: 12px;
+}
+
+.hl-mainLayout-selectorLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid black;
+    border-radius: 12px 0 0 12px;
+    height: 3.5rem;
+}
+
+.hl-mainLayout-selectorRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    border-radius: 0 12px 12px 0;
+}
+
+.hl-mainLayout-selectorLeft,
+.hl-mainLayout-selectorRight {
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hl-mainLayout-selectorLeft.active {
+    background-color: #38A3A5;
+    color: white;
+}
+
+.hl-mainLayout-selectorRight.active {
+    background-color: #38A3A5;
+    color: white;
+}
+
+.hl-mainLayout-selectorAlquiler {
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.hl-mainLayout-selectorcompra {
+    font-size: 28px;
+    font-weight: 200;
 }
