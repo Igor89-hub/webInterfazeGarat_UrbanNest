@@ -41,12 +41,14 @@
 }
 
 .hl-mainLayout-carrusel {
+    position: relative;
     display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: auto;
-    background-color: grey;
 }
 
 .hl-mainLayout-selector {
@@ -57,6 +59,12 @@
     height: 3.5rem;
     border: 1px solid white;
     border-radius: 12px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para que se lea mejor */
 }
 
 .hl-mainLayout-selectorLeft {
@@ -66,6 +74,7 @@
     border-right: 1px solid black;
     border-radius: 12px 0 0 12px;
     height: 3.5rem;
+    color: white;
 }
 
 .hl-mainLayout-selectorRight {
@@ -74,6 +83,7 @@
     justify-content: center;
     height: 3.5rem;
     border-radius: 0 12px 12px 0;
+    color: white;
 }
 
 .hl-mainLayout-selectorLeft,
@@ -85,12 +95,12 @@
 
 .hl-mainLayout-selectorLeft.active {
     background-color: #38A3A5;
-    color: white;
+    color: black;
 }
 
 .hl-mainLayout-selectorRight.active {
     background-color: #38A3A5;
-    color: white;
+    color: black;
 }
 
 .hl-mainLayout-selectorAlquiler {

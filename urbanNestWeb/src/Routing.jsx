@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router";
-import { HomeLinkMainPage } from "./components/HomeLinkMainPage";
+import { HomeLinkMainPage } from "./components/homeLinkMainPage";
 import './css/HomeLinkMainPage.css';
 
 export default function Routing(){
