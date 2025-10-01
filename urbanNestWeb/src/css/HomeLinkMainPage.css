@@ -42,15 +42,16 @@
 
 .hl-mainLayout-carrusel {
     position: relative;
+    flex-direction: column;
     display: flex;
-    flex-wrap: nowrap;
     overflow: hidden;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: auto;
 }
-.hl-mainLayout-dividerTitle{
+
+.hl-mainLayout-dividerTitle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +62,8 @@
     top: 20%;
     z-index: 10;
 }
-.hl-mainLayout-title{
+
+.hl-mainLayout-title {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,6 +73,7 @@
     height: auto;
     color: white;
 }
+
 .hl-mainLayout-selector {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -84,7 +87,8 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para que se lea mejor */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Fondo semitransparente para que se lea mejor */
 }
 
 .hl-mainLayout-selectorLeft {
@@ -131,4 +135,44 @@
 .hl-mainLayout-selectorcompra {
     font-size: 28px;
     font-weight: 200;
+}
+
+.h1-mainLayout-autoComplete {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+.hl-mainLayout-buttonSearch{
+    margin-left: 50px;
+    width: 100px;
+    min-height: 50px;
+    height: 60px;
+    font-weight: 200;
+    font-size: 24px;
+    border-radius: 32px;
+    color: white;
+    background-color: #38A3A5;
+    border: none;
+}
+.hl-mainLayout-BestNewBuild{
+    display: flex;
+    align-items: center;
+    margin: 40px 60px 40px 60px;
+    padding: 9px 18px;
+    width: 100%;
+    height: auto;    
+}
+.hl-mainLayout-BestNewBuild-headerTitle{
+    font-size: 35px;
+    margin: 0 0 40px 0;
+}
+.hl-mainLayout-BestNewBuild-headerDescription{
+    display: block;
+    width: 100%;
+    font-size: 25px;
 }
