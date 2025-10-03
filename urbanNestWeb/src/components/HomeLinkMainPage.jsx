@@ -96,6 +96,7 @@ export function HomeLinkMainPage() {
                                         sx={{
                                             '& .MuiInputBase-input': { color: 'white' },
                                             '& .MuiInputLabel-root': { color: 'white' },
+                                            '& .MuiAutocomplete-option': { backgroundColor: '#000' },
                                             '& .MuiOutlinedInput-notchedOutline': { borderColor: 'white', borderRadius: '40px' },
                                             width: 600,
                                         }}
@@ -114,6 +115,34 @@ export function HomeLinkMainPage() {
                 <header className="hl-mainLayout-BestNewBuild-header">
                     <h2 className="hl-mainLayout-BestNewBuild-headerTitle">Lo más destacado de obra nueva</h2>
                     <span className="hl-mainLayout-BestNewBuild-headerDescription">Descubre todo lo que puedes encontrar en HomeLink</span>
+                </header>
+            </div>
+            <div className="hl-mainLayout-BestNewBuild-showBox">
+                <div className="hl-mainLayout-BestNewBuild-showCard">
+                    <img src="/images/bestNewBuild_images/chaletDonos.png" alt="primeraFoto" className="hl-mainLayout-BestNewBuild-img" />
+                    <div className="hl-mainLayout-BestNewBuild-container">
+                        <h3 className="hl-mainLayout-BestNewBuild-containerTitle">Chalet en Donosti, Kañueta Bidea</h3>
+                        <p className="hl-mainLayout-BestNewBuild-containerText">Descripcion corta de la casa</p>
+                    </div>
+                </div>
+                <div className="hl-mainLayout-BestNewBuild-showCard">
+                    <img src="/images/bestNewBuild_images/aticoMadrid.png" alt="segundaFoto" className="hl-mainLayout-BestNewBuild-img" />
+                    <div className="hl-mainLayout-BestNewBuild-container">
+                        <h3 className="hl-mainLayout-BestNewBuild-containerTitle">Ático en Madrid, Calle de las Aguas</h3>
+                        <p className="hl-mainLayout-BestNewBuild-containerText">Descripcion corta de la casa</p>
+                    </div>
+                </div>
+                <div className="hl-mainLayout-BestNewBuild-showCard">
+                    <img src="/images/bestNewBuild_images/adosadoBarcelona.png" alt="primeraFoto" className="hl-mainLayout-BestNewBuild-img" />
+                    <div className="hl-mainLayout-BestNewBuild-container">
+                        <h3 className="hl-mainLayout-BestNewBuild-containerTitle">Adosado en Barcelona, Calle de Jaume Càncer</h3>
+                        <p className="hl-mainLayout-BestNewBuild-containerText">Descripcion corta de la casa</p>
+                    </div>
+                </div>
+            </div>
+            <div className="hl-mainLayout-whyHomeLinkHeader">
+                <header className="hl-mainLayout-whyHomeLinkHeaderTitle">
+                    <h2 className="hl-mainLayout-whyHomeLinkTitle">¿Porque escoger <span className="hl-mainLayout-whyHomeLinkTitle-home">Home</span><span className="hl-mainLayout-whyHomeLinkTitle-Link">Link</span>?</h2>
                 </header>
             </div>
         </div>
