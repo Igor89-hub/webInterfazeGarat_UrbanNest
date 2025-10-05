@@ -6,7 +6,7 @@ const topCitiesSpain = [{
     alquiler: "12.000€/mes",
     metros_cuadrados: 320,
     habitaciones: 4,
-    banos: 5,
+    banos: 4,
     estado: 'Reformado de lujo',
     descripcion_corta: 'Exclusivo ático dúplex de 320 m² en La Latina con una espectacular terraza de 100 m² con piscina privada y vistas únicas al Madrid histórico.',
     descripcion: 'Espectacular ático dúplex en el corazón del Madrid de los Austrias. Esta propiedad única ha sido reformada por un prestigioso estudio de arquitectura, combinando el encanto histórico del edificio con un diseño interior de vanguardia. La planta principal cuenta con un salón diáfano de 120 m² con techos de doble altura y vigas de madera originales, una cocina de autor totalmente equipada con electrodomésticos de alta gama y dos suites con baño privado. La planta superior alberga la suite principal con vestidor y un baño con vistas panorámicas, además de una cuarta habitación actualmente utilizada como despacho. Su joya es la terraza de 100 m² con piscina privada climatizada, desde donde se pueden admirar unas vistas inigualables del casco antiguo de Madrid.',

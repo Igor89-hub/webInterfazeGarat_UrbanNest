@@ -4,6 +4,7 @@ import { HouseResume } from "./components/HouseResume";
 import { SeeLocationMap } from "./components/SeeLocationMap";
 import './css/HomeLinkMainPage.css';
 import './css/HouseResume.css';
+import './css/SeeLocationMap.css';
 
 export default function Routing(){
     return(

@@ -5,3 +5,53 @@
     padding: 0;
     font-family: "DM Sans", sans-serif;
 }
+
+.sm-mainLayout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.sm-mainLayout-headerTitle{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sm-mainLayout-headerTitle-cityInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    margin: 30px 50px 30px 50px;
+}
+.sm-mainLayout-headerTitle-contactUs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    margin: 30px 50px 30px 50px;
+}
+.sm-mainLayout-headerTitle-contactUs-button{
+    width: 150px;
+    height: 50px;
+    border-radius: 12px;
+    border: none;
+    background-color: #EE6C4D;
+    color: white;
+    font-size: 20px;
+}
+.sm-mainLayout-headerTitle-cityInfoText{
+    font-size: 24px;
+    font-weight: 600;
+}
+.sm-mainLayout-googleMap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
