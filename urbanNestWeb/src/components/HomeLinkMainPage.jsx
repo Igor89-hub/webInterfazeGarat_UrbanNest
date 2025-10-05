@@ -6,8 +6,18 @@ import { SplitText } from "gsap/SplitText";
 import topCitiesSpain from "../js/ciudades.js";
 import "../css/Carrusel.css";
 import { Controller, useForm } from "react-hook-form";
+import { FaHouseSignal } from "react-icons/fa6";
+import { TbHomeSearch } from "react-icons/tb";
+import { FaBuildingShield } from "react-icons/fa6";
+import { useNavigate } from "react-router";
 
 export function HomeLinkMainPage() {
+
+    const navigate = useNavigate();
+
+        const handleClikResume = () => {
+        navigate('/HouseResume');
+    }
 
     useEffect(() => {
         const split = new SplitText(".hl-mainLayout-title", {
@@ -21,6 +31,8 @@ export function HomeLinkMainPage() {
             stagger: 0.1,
             ease: "power3.out"
         });
+
+        let split2 = SplitText.create(".hl-mainLayout-selectorAlquiler");
 
         let t1 = gsap.timeline();
 
@@ -52,6 +64,9 @@ export function HomeLinkMainPage() {
         }
     });
 
+    const cityNames = topCitiesSpain.map(city => city.ciudad);
+
+    
     return (
         <div className="hl-mainLayout">
             <header className="hl-mainHeaderTitle">
@@ -83,7 +98,7 @@ export function HomeLinkMainPage() {
                             <Autocomplete
                                 freeSolo
                                 disablePortal
-                                options={topCitiesSpain || []}
+                                options={cityNames || []}
                                 value={field.value}
                                 onChange={(_, newValue) => field.onChange(typeof newValue === 'string' ? newValue : newValue || "")}
                                 onInputChange={(_, newInputVlue) => field.onChange(newInputVlue)}
@@ -108,7 +123,7 @@ export function HomeLinkMainPage() {
                         )}
                     >
                     </Controller>
-                    <button className="hl-mainLayout-buttonSearch">Bilatu</button>
+                    <button className="hl-mainLayout-buttonSearch" onClick={handleClikResume}>Bilatu</button>
                 </div>
             </div>
             <div className="hl-mainLayout-BestNewBuild">
@@ -145,6 +160,32 @@ export function HomeLinkMainPage() {
                     <h2 className="hl-mainLayout-whyHomeLinkTitle">¿Porque escoger <span className="hl-mainLayout-whyHomeLinkTitle-home">Home</span><span className="hl-mainLayout-whyHomeLinkTitle-Link">Link</span>?</h2>
                 </header>
             </div>
+            <div className="hl-mainLayout-whyHomeLinkBody-box">
+                <div className="hl-mainLayout-whyHomeLinkBody-case">
+                    <FaHouseSignal size={80} />
+                    <div className="hl-mainLayout-whyHomeLinkBody-caseContainer">
+                        <h3 className="hl-mainLayout-whyHomeLinkBody-caseContainerTitle">LA MAYOR OFERTA DE INMUEBLES</h3>
+                        <p className="hl-mainLayout-whyHomeLinkBody-caseContainerText">Explora miles de propiedades en alquiler y venta. Nuestra amplia base de datos se actualiza constantemente para que encuentres exactamente el hogar que buscas.</p>
+                    </div>
+                </div>
+                <div className="hl-mainLayout-whyHomeLinkBody-case">
+                    <TbHomeSearch size={80} color="#38A3A5" />
+                    <div className="hl-mainLayout-whyHomeLinkBody-caseContainer">
+                        <h3 className="hl-mainLayout-whyHomeLinkBody-caseContainerTitle">BÚSQUEDA FÁCIL</h3>
+                        <p className="hl-mainLayout-whyHomeLinkBody-caseContainerText">Usa nuestros filtros avanzados para encontrar tu hogar perfecto en minutos. Busca por precio, ubicación, número de habitaciones y mucho más. ¡Nunca fue tan sencillo!</p>
+                    </div>
+                </div>
+                <div className="hl-mainLayout-whyHomeLinkBody-case">
+                    <FaBuildingShield size={80} color="#EE6C4D" />
+                    <div className="hl-mainLayout-whyHomeLinkBody-caseContainer">
+                        <h3 className="hl-mainLayout-whyHomeLinkBody-caseContainerTitle">CONFIANZA Y ASESORAMIENTO EXPERTO</h3>
+                        <p className="hl-mainLayout-whyHomeLinkBody-caseContainerText">Te conectamos con agentes verificados y te ofrecemos la información necesaria para tomar la mejor decisión. Tu tranquilidad es nuestra prioridad.</p>
+                    </div>
+                </div>
+            </div>
+            <footer className="hl-mainLayout-footer">
+                <p className="hl-mainLayout-footerText">© 2025 MyWebsite. All rights reserved.</p>
+            </footer>
         </div>
     )
 }

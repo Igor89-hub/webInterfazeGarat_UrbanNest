@@ -237,9 +237,68 @@
     padding: 4px 8px;
     margin: 4px 8px 4px 8px;
 }
-.hl-mainLayout-whyHomeLinkTitle-home{
+
+.hl-mainLayout-whyHomeLinkTitle-home {
     color: #38A3A5;
 }
-.hl-mainLayout-whyHomeLinkTitle-Link{
+
+.hl-mainLayout-whyHomeLinkTitle-Link {
     color: #EE6C4D;
+}
+
+.hl-mainLayout-whyHomeLinkHeader {
+    display: flex;
+    align-items: center;
+    margin: 40px 60px 40px 60px;
+    padding: 9px 18px;
+    width: 100%;
+    height: auto;
+}
+
+.hl-mainLayout-whyHomeLinkTitle {
+    font-size: 35px;
+    margin: 0 0 35px 0;
+}
+
+.hl-mainLayout-whyHomeLinkBody-box {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 42px 64px;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+.hl-mainLayout-whyHomeLinkBody-case {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.hl-mainLayout-whyHomeLinkBody-caseContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 16px 32px;
+    margin-top: 60px;
+}
+
+.hl-mainLayout-footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #38A3A5;
+    border-radius: 15px 15px 0 0;
+}
+
+.hl-mainLayout-footerText {
+    color: white;
+    padding: 24px 48px;
+    margin: 20px 40px 20px 40px;
 }

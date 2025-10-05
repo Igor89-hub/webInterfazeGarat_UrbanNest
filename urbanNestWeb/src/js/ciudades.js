@@ -1,8 +1,83 @@
-const topCitiesSpain = [
-  { label: 'Madrid', street: 'Calle de las Aguas' },
-  { label: 'Barcelona', street: 'Calle de Jaume Càncer' },
-  { label: 'Bilbao', street: 'Calle Colón de Larreátegui' },
-  { label: 'San Sebastian', street: 'Kañueta Bidea' },
+const topCitiesSpain = [{
+    ciudad: 'Madrid',
+    calle: 'Calle de las Aguas, La Latina',
+    tipo: 'Ático Dúplex de Diseño',
+    compra: "4.300.000€",
+    alquiler: "12.000€/mes",
+    metros_cuadrados: 320,
+    habitaciones: 4,
+    banos: 5,
+    estado: 'Reformado de lujo',
+    descripcion_corta: 'Exclusivo ático dúplex de 320 m² en La Latina con una espectacular terraza de 100 m² con piscina privada y vistas únicas al Madrid histórico.',
+    descripcion: 'Espectacular ático dúplex en el corazón del Madrid de los Austrias. Esta propiedad única ha sido reformada por un prestigioso estudio de arquitectura, combinando el encanto histórico del edificio con un diseño interior de vanguardia. La planta principal cuenta con un salón diáfano de 120 m² con techos de doble altura y vigas de madera originales, una cocina de autor totalmente equipada con electrodomésticos de alta gama y dos suites con baño privado. La planta superior alberga la suite principal con vestidor y un baño con vistas panorámicas, además de una cuarta habitación actualmente utilizada como despacho. Su joya es la terraza de 100 m² con piscina privada climatizada, desde donde se pueden admirar unas vistas inigualables del casco antiguo de Madrid.',
+    caracteristicas: [
+      'Terraza con piscina privada',
+      'Ascensor con acceso directo',
+      'Plaza de garaje para 2 coches',
+      'Sistema de domótica integral',
+      'Suelo radiante y aerotermia'
+    ],
+  },
+  {
+    ciudad: 'Barcelona',
+    calle: 'Calle de Jaume Càncer',
+    tipo: 'Piso Modernista Rehabilitado',
+    compra: "3.850.000€",
+    alquiler: "10.500€/mes",
+    metros_cuadrados: 280,
+    habitaciones: 4,
+    banos: 4,
+    estado: 'Rehabilitación integral',
+    descripcion_corta: 'Magnífico piso modernista de 280 m² en el Eixample con elementos originales restaurados, techos altos y una terraza con vistas a la Sagrada Familia.',
+    descripcion: 'Excepcional vivienda modernista en pleno Eixample Derecho, a pocos metros de la Sagrada Familia. Este inmueble ha sido meticulosamente restaurado respetando todos los elementos arquitectónicos originales de la época: mosaicos hidráulicos, techos con molduras de escayola de 3,5 metros de altura, vidrieras emplomadas y puertas de madera maciza. La distribución incluye un amplio salón-comedor de 80 m² con balcón a la calle, una cocina office de diseño completamente equipada, tres suites dobles y una habitación adicional perfecta como estudio. La propiedad cuenta con una espectacular terraza de 60 m² en la azotea del edificio con vistas privilegiadas a la Sagrada Familia y al skyline de Barcelona.',
+    caracteristicas: [
+      'Elementos modernistas originales',
+      'Terraza privada en azotea',
+      'Certificación energética A',
+      'Aire acondicionado por conductos',
+      'Trastero de 15 m²'
+    ],
+  },
+  {
+    ciudad: 'Bilbao',
+    calle: 'Calle Colón de Larreátegui',
+    tipo: 'Piso Señorial',
+    compra: "2.100.000€",
+    alquiler: "6.500€/mes",
+    metros_cuadrados: 240,
+    habitaciones: 5,
+    banos: 3,
+    estado: 'Conservación excepcional',
+    descripcion_corta: 'Elegante piso señorial de 240 m² en la Gran Vía bilbaína con vistas al parque de Doña Casilda, techos altos y distribución clásica.',
+    descripcion: 'Distinguida vivienda señorial ubicada en una de las arterias más prestigiosas de Bilbao, con vistas directas al emblemático Parque de Doña Casilda de Iturrizar. Este inmueble de principios del siglo XX conserva todo el esplendor de la arquitectura burguesa vasca: techos de 3,2 metros con molduras originales, suelos de parqué de roble, puertas de dos hojas y amplios ventanales. La distribución cuenta con un hall de entrada señorial, salón comedor de 65 m² con mirador acristalado, biblioteca con estanterías de madera a medida, cocina completamente renovada con office, cinco dormitorios amplios (tres de ellos en suite) y un baño completo adicional. La finca dispone de portero físico, dos ascensores y un nivel de seguridad excepcional.',
+    caracteristicas: [
+      'Vistas al Parque Doña Casilda',
+      'Portero físico 24h',
+      'Dos plazas de garaje',
+      'Calefacción central',
+      'Edificio protegido'
+    ],
+  },
+  {
+    ciudad: 'San Sebastian',
+    calle: 'Kañueta Bidea',
+    tipo: 'Villa con Vistas al Mar',
+    compra: "5.200.000€",
+    alquiler: "14.000€/mes",
+    metros_cuadrados: 380,
+    habitaciones: 5,
+    banos: 5,
+    estado: 'Nueva construcción',
+    descripcion_corta: 'Espectacular villa de diseño contemporáneo de 380 m² con vistas panorámicas a la Bahía de La Concha, piscina infinita y jardín de 800 m².',
+    descripcion: 'Exclusiva villa de nueva construcción situada en una de las zonas más privilegiadas de San Sebastián, en el monte Igueldo, con vistas panorámicas absolutas a la Bahía de La Concha y al mar Cantábrico. Esta propiedad de arquitectura contemporánea ha sido diseñada por un reconocido estudio de arquitectura vasco, maximizando la luminosidad natural y las vistas en cada estancia. La planta principal integra un espectacular salón-comedor de 100 m² con ventanales de suelo a techo y acceso directo a la terraza y piscina infinita, una cocina de diseño con isla central y zona de comedor informal, y una suite de invitados. La planta superior alberga la impresionante suite principal de 80 m² con vestidor, baño spa y terraza privada, además de tres suites adicionales. El jardín de 800 m² incluye zona de barbacoa, bodega exterior y un gimnasio acristalado con sauna.',
+    caracteristicas: [
+      'Piscina infinita climatizada',
+      'Gimnasio y sauna',
+      'Sistema de seguridad integral',
+      'Garaje para 3 vehículos',
+      'Paneles solares y aerotermia'
+    ],
+  },
 ];
 
 export default topCitiesSpain;
