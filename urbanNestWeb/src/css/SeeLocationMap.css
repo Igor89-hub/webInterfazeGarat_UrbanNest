@@ -25,8 +25,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: 12px 24px;
     margin: 30px 50px 30px 50px;
+}
+.sm-mainLayout-headerTitle-cityInfoText-details{
+    width: 100%;
+    height: auto;
+    align-items: flex-start;
+    padding: 8px 16px;
 }
 .sm-mainLayout-headerTitle-contactUs{
     display: flex;
@@ -43,6 +50,27 @@
     background-color: #EE6C4D;
     color: white;
     font-size: 20px;
+    cursor: pointer;
+}
+.sm-mainLayout-headerTitle-close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    margin: 30px 50px 20px 50px;
+}
+.sm-mainLayout-headerTitle-closeButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 7px;
+    transition: all .2s;
+    cursor: pointer;
+}
+.sm-mainLayout-headerTitle-closeButton:hover{
+    background-color: #EBE7E6;
 }
 .sm-mainLayout-headerTitle-cityInfoText{
     font-size: 24px;

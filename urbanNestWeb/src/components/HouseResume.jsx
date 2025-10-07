@@ -23,13 +23,22 @@ export function HouseResume() {
     const goSeeTheMap = () => {
 
         const cityStreet = `${houseData.ciudad} - ${houseData.calle}`;
-        console.log(cityStreet);
+        const cityDetails = `${houseData.compra} | ${houseData.metros_cuadrados} | ${houseData.habitaciones} | ${houseData.banos}`;
+        console.log(cityStreet, cityDetails);
         navigate("/SeeLocationMap", {
             state: {
                 ciudad: houseData.ciudad,
                 calle: houseData.calle,
+                compra: houseData.compra,
+                metros: houseData.metros_cuadrados,
+                hab: houseData.habitaciones,
+                banos: houseData.banos,
             }
         });
+    }
+
+    const goExtendedInfo = () => {
+        navigate("/FullExtendedHouseInfo");
     }
 
     let houseData = topCitiesSpain[0];
@@ -104,7 +113,7 @@ export function HouseResume() {
                         {(() => {
                             return (
                                 <>
-                                    <h2 className="hl-resumeMain-houseResume-displayResume-ciudadCalle">
+                                    <h2 className="hl-resumeMain-houseResume-displayResume-ciudadCalle" onClick={goExtendedInfo}>
                                         {houseData.ciudad} - {houseData.calle}
                                     </h2>
                                     <p className="hl-resumeMain-houseResume-displayResume-tipo">

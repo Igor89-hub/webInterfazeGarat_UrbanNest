@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Domine:wght@400..700&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+.hl-mainInfoLayout {
+    display: grid; /* 1. Convertimos el contenedor en una rejilla (grid) */
+    
+    /* 2. Definimos dos columnas: la primera ocupará 2 tercios (2fr) y la segunda 1 tercio (1fr) del espacio disponible */
+    grid-template-columns: 2fr 1fr; 
+    
+    gap: 2rem; /* 3. Añadimos un espacio de separación entre todos los elementos */
+    
+    /* Estilos adicionales para centrar y limitar el ancho en pantallas grandes */
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto; /* Centra el layout en la página */
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.hl-mainInfoLayout-carrusel {
+    /* 4. Hacemos que este elemento ocupe desde la primera línea de columna (1) hasta la última (-1) */
+    grid-column: 1 / -1; 
+    
+    /* Estilos para que se parezca a tu imagen */
+    min-height: 300px;
+    background-color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+/* 5. Los elementos 'infoCompleta' y 'contactForm' se colocarán automáticamente 
+   en las celdas disponibles de la rejilla (primera y segunda columna de la segunda fila) */
+
+.hl-mainInfoLayout-infoCompleta {
+    /* Estilos para que se parezca a tu imagen */
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hl-mainInfoLayout-contactForm {
+    /* Estilos para que se parezca a tu imagen */
+    border: 2px solid #a0d8d3;
+    padding: 2rem;
+    border-radius: 8px;
+}
