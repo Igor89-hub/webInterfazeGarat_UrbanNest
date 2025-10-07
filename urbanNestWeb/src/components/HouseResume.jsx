@@ -39,6 +39,10 @@ export function HouseResume() {
 
     const goExtendedInfo = () => {
         navigate("/FullExtendedHouseInfo");
+    };
+
+    const goToAnnouncement = () => {
+        navigate("/PutYourAnnouncement");
     }
 
     let houseData = topCitiesSpain[0];
@@ -94,7 +98,7 @@ export function HouseResume() {
                     </button>
                 </div>
                 <div className="hl-resumeMain-headerTitle-case">
-                    <button type="button" name="iragarkia" className="hl-resumeMain-headerTitle-iragarkia">Pon tu anuncio aqui</button>
+                    <button type="button" name="iragarkia" className="hl-resumeMain-headerTitle-iragarkia" onClick={goToAnnouncement}>Pon tu anuncio aqui</button>
                 </div>
             </header>
             <div className="hl-resumeMain-navBar">

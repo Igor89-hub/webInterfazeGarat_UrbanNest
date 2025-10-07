@@ -1,5 +1,6 @@
 import { Controller, useForm } from "react-hook-form";
 import { TextField, Autocomplete } from "@mui/material";
+import { useNavigate } from "react-router";
 import { ImageCarrusel } from "./ImageCarrusel.jsx";
 import { IoMdSearch } from "react-icons/io";
 import topCitiesSpain from "../js/ciudades.js";
@@ -11,14 +12,26 @@ export function FullExtendedHouseInfo() {
         }
     });
 
+    const navigate = useNavigate();
+
 
     const cityNames = topCitiesSpain.map(city => city.ciudad);
+
+    const loadInfo = topCitiesSpain[0];
+
+    const goBackMain = () => {
+        navigate("/");
+    }
+
+    const goYourAnnouncement = () => {
+        navigate("/PutYourAnnouncement");
+    }
 
     return (
         <div className="hl-resumeMain">
             <header className="hl-resumeMain-headerTitle">
                 <div className="hl-resumeMain-headerTitle-case">
-                    <img className="hl-resumeMain-headerTitle-img" alt="LogoEmpresa" src="/images/homeLinkLogo.png" />
+                    <img className="hl-resumeMain-headerTitle-img" alt="LogoEmpresa" src="/images/homeLinkLogo.png" onClick={goBackMain}/>
                 </div>
                 <div className="hl-resumeMain-headerTitle-case">
                     <Controller
@@ -62,13 +75,64 @@ export function FullExtendedHouseInfo() {
                     </button>
                 </div>
                 <div className="hl-resumeMain-headerTitle-case">
-                    <button type="button" name="iragarkia" className="hl-resumeMain-headerTitle-iragarkia">Pon tu anuncio aqui</button>
+                    <button type="button" name="iragarkia" className="hl-resumeMain-headerTitle-iragarkia" onClick={goYourAnnouncement}>Pon tu anuncio aqui</button>
                 </div>
             </header>
             <div className="hl-mainInfoLayout">
-                <div className="hl-mainInfoLayout-carrusel"></div>
-                <div className="hl-mainInfoLayout-infoCompleta"></div>
-                <div className="hl-mainInfoLayout-contactForm"></div>
+                <div className="hl-mainInfoLayout-carrusel">
+                    <ImageCarrusel />
+                </div>
+                <div className="hl-mainInfoLayout-infoCompleta">
+                    {(() => {
+                        return (
+                            <>
+                                <h2 className="hl-mainInfoLayout-infoCompletaTitle">
+                                    {loadInfo.ciudad} - {loadInfo.calle}
+                                </h2>
+                                <p className="hl-mainInfoLayout-infoCompletaType">
+                                    {loadInfo.tipo}
+                                </p>
+                                <p className="hl-mainInfoLayout-infoCompletaBuy">
+                                    {loadInfo.compra}
+                                </p>
+                                <p className="hl-mainInfoLayout-infoCompletaDetails-title">Detalles: </p>
+                                <ul className="hl-mainInfoLayout-infoCompletaDetails-list">
+                                    <li className="hl-mainInfoLayout-infoCompletaDetails-listText">
+                                        {loadInfo.metros_cuadrados} m²
+                                    </li>
+                                    <li className="hl-mainInfoLayout-infoCompletaDetails-listText">
+                                        {loadInfo.habitaciones} habitaciones
+                                    </li>
+                                    <li className="hl-mainInfoLayout-infoCompletaDetails-listText">
+                                        {loadInfo.banos} baños
+                                    </li>
+                                </ul>
+                                <p className="hl-mainInfoLayout-infoCompleta-description">
+                                    {loadInfo.descripcion}
+                                </p>
+                                <p className="hl-mainInfoLayout-infoCompletaDetails-title">Características:</p>
+                                <ul className="hl-mainInfoLayout-infoCompletaDetails-list">
+                                    {loadInfo.caracteristicas.map((caracteristica, index) => (
+                                        <li key={index} className="hl-mainInfoLayout-infoCompletaDetails-listText">
+                                            {caracteristica}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </>
+                        )
+                    })()}
+                </div>
+                <div className="hl-mainInfoLayout-contactForm">
+                    <form className="hl-mainInfoLayout-contactForm-form">
+                        <label htmlFor="ZureEmail">Tu email: </label>
+                        <input type="email" name="ZureEmail" className="hl-mainInfoLayout-contactForm-formEmail" />
+                        <label htmlFor="zureIzena">Tu nombre: </label>
+                        <input type="email" name="zureIzena" className="hl-mainInfoLayout-contactForm-formIzena" />
+                        <label htmlFor="zureApellido">Tu apellido: </label>
+                        <input type="email" name="zureApellido" className="hl-mainInfoLayout-contactForm-formApellido" />
+                        <input type="submit" value="CONTACTAR" name="contactMe" className="hl-mainInfoLayout-contactForm-formSubmit" />
+                    </form>
+                </div>
             </div>
         </div>
     )

@@ -12,28 +12,13 @@ export function ImageCarrusel() {
     ];
 
     const imagesAticoMadrid = [
-        {src: "/images/aticoMadrid/aticoMadrid.png", alt: "Terraza atico de madrid"},
-        {src: "/images/aticoMadrid/salon.png", alt: "Salon"},
-        {src: "/images/aticoMadrid/cocina.png", alt:"Cocina"},
-        {src: "/images/aticoMadrid/bañoPrincipal.png", alt: "Baño principal"},
-        {src: "/images/aticoMadrid/bañoInvitados.png", alt: "Baño invitados"},
-        {src: "/images/aticoMadrid/habitacionPrincipal.png", alt: "Habitacion principal"}
+        { src: "/images/aticoMadrid/aticoMadrid.png", alt: "Terraza atico de madrid" },
+        { src: "/images/aticoMadrid/salon.png", alt: "Salon" },
+        { src: "/images/aticoMadrid/cocina.png", alt: "Cocina" },
+        { src: "/images/aticoMadrid/bañoPrincipal.png", alt: "Baño principal" },
+        { src: "/images/aticoMadrid/bañoInvitados.png", alt: "Baño invitados" },
+        { src: "/images/aticoMadrid/habitacionPrincipal.png", alt: "Habitacion principal" }
     ];
-
-
-    let location = useLocation();
-
-    const [activeImages, setActiveImages] = useState(images);
-
-    useEffect(() => {
-        if(location.pathname === "/"){
-            setActiveImages(images);
-        }else if(location.pathname === "/HouseResume"){
-            setActiveImages(imagesAticoMadrid);
-        }
-    }, [location.pathname]) //Se ejecutara cuando el pathName se cambie
-
-
 
     // Slider settings
     const settings = {
@@ -44,25 +29,49 @@ export function ImageCarrusel() {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        fade: true,              
-        cssEase: 'ease-in-out',  
-        arrows: false,            
-        adaptiveHeight: false    
+        fade: true,
+        cssEase: 'ease-in-out',
+        arrows: false,
+        adaptiveHeight: false
     };
+    const fullInfoSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplaySpeed: 3000,
+    };
+
+    let location = useLocation();
+
+    const [activeImages, setActiveImages] = useState(images);
+    const [ activeSettings, setActiveSettings ] = useState(settings);
+
+    useEffect(() => {
+        if (location.pathname === "/") {
+            setActiveImages(images);
+        } else if (location.pathname === "/HouseResume") {
+            setActiveImages(imagesAticoMadrid);
+        } else if (location.pathname === "/FullExtendedHouseInfo") {
+            setActiveImages(imagesAticoMadrid);
+            setActiveSettings(fullInfoSettings);
+        }
+    }, [location.pathname]) //Se ejecutara cuando el pathName se cambie
 
 
     return (
         <div className="hl-mainLayout-carruselContainer">
-            <Slider {...settings}>
+            <Slider {...activeSettings}>
                 {activeImages.map((image, index) => (
                     <div key={index}>
-                        <img src={image.src} alt={image.alt} 
-                        style={{ 
-                                width: '100%', 
+                        <img src={image.src} alt={image.alt}
+                            style={{
+                                width: '100%',
                                 height: '600px',
                                 objectFit: 'cover', // Asegúrate de mantener object-fit para que no se deformen
                                 filter: 'brightness(60%)'
-                            }}  
+                            }}
                         />
                     </div>
                 ))}

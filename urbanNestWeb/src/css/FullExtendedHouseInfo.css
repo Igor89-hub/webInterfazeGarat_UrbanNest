@@ -27,7 +27,7 @@
     /* 4. Hacemos que este elemento ocupe desde la primera línea de columna (1) hasta la última (-1) */
     grid-column: 1 / -1; 
     
-    /* Estilos para que se parezca a tu imagen */
+
     min-height: 300px;
     background-color: #d3d3d3;
     display: flex;
@@ -37,20 +37,200 @@
     color: #555;
 }
 
-/* 5. Los elementos 'infoCompleta' y 'contactForm' se colocarán automáticamente 
-   en las celdas disponibles de la rejilla (primera y segunda columna de la segunda fila) */
-
 .hl-mainInfoLayout-infoCompleta {
-    /* Estilos para que se parezca a tu imagen */
     min-height: 400px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding: 9px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.hl-mainInfoLayout-infoCompletaTitle {
+    font-size: 2.8rem; /* Tamaño grande para que destaque */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+/* 3. Estilos para el tipo de vivienda (Piso, Casa, etc.) */
+.hl-mainInfoLayout-infoCompletaType {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #00796b; /* Un color de acento para diferenciarlo */
+    background-color: #e0f2f1;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+/* 4. Estilos para la operación (Venta, Alquiler) */
+.hl-mainInfoLayout-infoCompletaBuy {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* 5. Estilos para los subtítulos "Detalles" y "Características" */
+.hl-mainInfoLayout-infoCompletaDetails-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #a0d8d3; /* Línea inferior para separar secciones */
+    padding-bottom: 0.25rem;
+    width: 100%; /* Para que la línea ocupe todo el ancho */
+}
+
+/* 6. Estilos para la descripción larga */
+.hl-mainInfoLayout-infoCompleta-description {
+    font-size: 1rem;
+    line-height: 1.7; /* Mayor altura de línea para facilitar la lectura */
+    color: #555;
+    margin-top: 1rem;
+}
+
+/* 7. Estilos para las listas de Detalles y Características */
+.hl-mainInfoLayout-infoCompletaDetails-list {
+    list-style: none; /* Quitamos los puntos por defecto */
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    gap: 0.5rem 1.5rem; /* Espacio entre los ítems */
+}
+
+/* 8. Estilos para cada elemento de las listas */
+.hl-mainInfoLayout-infoCompletaDetails-listText {
+    font-size: 1rem;
+    color: #444;
+    padding-left: 1.5rem; /* Espacio para el icono */
+    position: relative;
+}
+
+/* 9. Añadimos un icono personalizado (check) a cada elemento de la lista */
+.hl-mainInfoLayout-infoCompletaDetails-listText::before {
+    content: '✔'; /* Puedes cambiarlo por '•', '→' o cualquier otro símbolo */
+    position: absolute;
+    left: 0;
+    color: #00796b; /* Mismo color de acento */
+    font-weight: bold;
 }
 
 .hl-mainInfoLayout-contactForm {
-    /* Estilos para que se parezca a tu imagen */
     border: 2px solid #a0d8d3;
     padding: 2rem;
     border-radius: 8px;
 }
+
+.hl-mainInfoLayout-contactForm {
+    /* El borde ya lo tienes definido, lo mantendremos */
+    border: 2px solid #a0d8d3;
+    padding: 2rem; /* Aumentamos un poco el padding para que el contenido no esté muy pegado al borde */
+    border-radius: 8px;
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra sutil para darle profundidad */
+    display: flex; /* Usamos flexbox para centrar el título si lo añadimos */
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los elementos hijos */
+}
+
+.hl-mainInfoLayout-contactForm-form {
+    display: flex;
+    flex-direction: column; /* Apilamos los elementos del formulario verticalmente */
+    width: 100%; /* El formulario ocupa todo el ancho del contenedor */
+    max-width: 300px; /* Limitamos el ancho para que no se estire demasiado en pantallas grandes */
+    gap: 1rem; /* Espacio entre los campos del formulario */
+}
+
+/* Estilo para las etiquetas (labels) */
+.hl-mainInfoLayout-contactForm-form label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.25rem; /* Pequeño espacio entre la etiqueta y el input */
+}
+
+/* Estilo para los campos de entrada (inputs de texto y email) */
+.hl-mainInfoLayout-contactForm-form input[type="email"],
+.hl-mainInfoLayout-contactForm-form input[type="text"] { /* Asumiendo que 'Tu número' será text */
+    padding: 0.75rem 1rem; /* Padding interno */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 25px; /* Bordes redondeados como en Figma */
+    font-size: 1rem;
+    color: #555;
+    outline: none; /* Quitamos el contorno al enfocar */
+    transition: border-color 0.3s ease; /* Transición suave para el foco */
+}
+
+.hl-mainInfoLayout-contactForm-form input[type="email"]:focus,
+.hl-mainInfoLayout-contactForm-form input[type="text"]:focus {
+    border-color: #00796b; /* Color de acento al enfocar */
+    box-shadow: 0 0 5px rgba(0, 121, 107, 0.3); /* Sombra sutil al enfocar */
+}
+
+/* Para los campos específicos de nombre y apellido, que parecen estar en línea */
+/* Si deseas que "Tu nombre" y "Tu apellido" estén en la misma línea, necesitarás un contenedor flexible para ellos */
+.hl-mainInfoLayout-contactForm-name-apellido-group {
+    display: flex;
+    gap: 1rem; /* Espacio entre los dos campos */
+    margin-top: -0.5rem; /* Ajuste para que se alineen mejor con las etiquetas previas */
+}
+
+.hl-mainInfoLayout-contactForm-name-apellido-group > div {
+    flex: 1; /* Cada campo ocupa la mitad del espacio */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para el botón de enviar */
+.hl-mainInfoLayout-contactForm-formSubmit {
+    background-color: #EE6C4D; /* Degradado como en Figma */
+    color: white;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1.5rem; /* Espacio superior para separarlo de los campos */
+}
+
+.hl-mainInfoLayout-contactForm-formSubmit:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(255, 126, 95, 0.3);
+}
+
+/* Estilo para el título "FORMULARIO DE CONTACTO" */
+.hl-contactForm-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 2rem; /* Espacio debajo del título */
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilo para el número de teléfono con icono */
+.hl-contactForm-phone-info {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem; /* Espacio arriba del bloque de teléfono */
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.hl-contactForm-phone-info svg { /* Si usas un icono SVG */
+    margin-right: 0.5rem;
+    color: #00796b;
+    font-size: 1.5rem;
+}
+
+.hl-contactForm-phone-info span { /* Para el texto del número de teléfono */
+    font-weight: 500;
+}
+
+
